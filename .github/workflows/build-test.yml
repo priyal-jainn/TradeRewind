@@ -6,8 +6,12 @@ on:
       - '**'   # runs on push to all branches
 
 jobs:
-  libuild-test:
+  build-test:
     runs-on: ubuntu-latest
+
+    defaults:
+        run:
+          shell: bash -el {0} #to avoid conda init error
 
     steps:
       - name: Checkout repository
