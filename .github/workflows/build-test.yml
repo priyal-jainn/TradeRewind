@@ -21,8 +21,8 @@ jobs:
         uses: conda-incubator/setup-miniconda@v3
         with:
           activate-environment: trade_rewind
+          auto-activate: true
           environment-file: environment.yml
-          auto-activate-base: false
 
       # - name: Install pylint (safety)
       #   run: |
